@@ -33,10 +33,22 @@ public class UserVO {
 	
 	private String userAddr1;
 	private String userAddr2;
-	private String userAddr3;
 	
 	private String totalUserTel;
 	private String totalUserEmail;
 	private String totalUserAddr;
+	
+	public void setTotalUserTel(){
+		this.totalUserTel = userTel1 + userTel2 + userTel3;
+	}
+	
+	public void setTotalUserEmail() {
+		this.totalUserEmail = userEmail1 +"@"+ userEmail2; 
+	}
+	
+	public void setTotalUserAddr() {
+		this.totalUserAddr = userAddr1 + userAddr2;
+	}
+	
 
 }

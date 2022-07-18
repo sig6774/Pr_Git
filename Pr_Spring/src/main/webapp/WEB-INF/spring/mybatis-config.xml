@@ -18,13 +18,15 @@
 		<!-- DB로 부터의 응답을 얼만큼 오래 기다릴지를 판단하는 타임아웃 설정 -->
 	</settings>
 	
-<!-- 	<typeAliases>
-		select할 때 resultType이 길어지는 것을 별칭으로 만들어줌 
-		<typeAlias type="com.spring.myweb.command.UserVO" alias="UserVO" />
+	<typeAliases>
+		<!-- select할 때 resultType이 길어지는 것을 별칭으로 만들어줌  -->
+		<typeAlias type="com.spring.pr.command.UserVO" alias="user" />
+		<!-- 
 		<typeAlias type="com.spring.myweb.command.ReplyVO" alias="ReplyVO" />
 		<typeAlias type="com.spring.myweb.command.FreeBoardVO" alias="FreeBoardVO" />
 		<typeAlias type="com.spring.myweb.command.SnsBoardVO" alias="SnsBoardVO" />		
-	</typeAliases> -->
+		-->
+	</typeAliases> 
 	
 	<!-- 여기서도 mapper 위치 지정 가능 
 		  하지만 root-context에 작성했기 때문에 굳이 지금 작성 하지 않아도 됨 -->
