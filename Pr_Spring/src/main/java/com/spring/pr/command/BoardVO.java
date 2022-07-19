@@ -1,6 +1,6 @@
 package com.spring.pr.command;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +15,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class BoardVO {
 	
-	/*CREATE TABLE PRBOARD(
+/*CREATE TABLE PRBOARD(
     b_num NUMBER(10) PRIMARY KEY, 
     b_writer VARCHAR2(30) NOT NULL,
     b_title VARCHAR2(50) NOT NULL, 

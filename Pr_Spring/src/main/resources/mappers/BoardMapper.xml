@@ -4,6 +4,49 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.spring.pr.board.mapper.IBoardMapper">
-	<!-- namespace는 어떤 interface를 참조하는지 지정  -->
+
+	<resultMap type="com.spring.pr.command.BoardVO" id="MappingBoard">
+		<id property="bNum" column = "b_num"/>
+		
+		<result property="bWriter" column="b_writer"/>
+		<result property="bTitle" column="b_title"/>
+		<result property="bContent" column="b_content"/>
+		<result property="bDate" column="b_date"/>
+	</resultMap>
 	
+	<insert id="regist">
+		INSERT INTO PRBOARD
+		(b_num, b_writer, b_title, b_content)
+		VALUES(b_num_seq.NEXTVAL, #{bWriter}, #{bTitle}, #{bContent})
+	</insert>
+	
+	<select id="getList" resultMap="MappingBoard">
+		select * from 
+		PRBOARD order by b_num DESC
+	</select>
+	
+	<select id="getContent" resultMap="MappingBoard">
+		SELECT * FROM 
+		PRBOARD 
+		WHERE b_num = #{bNum}
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		SELECT count(*) FROM
+		PRBOARD
+	</select>
+	
+	<update id="update">
+		UPDATE PRBOARD SET b_title = #{bTitle}, b_content = #{bContent}
+		WHERE b_num = #{bNum}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM PRBOARD
+		WHERE b_num = #{bNum}
+	</delete>
+	
+	
+	
+
 </mapper>
