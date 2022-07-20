@@ -33,7 +33,7 @@ public class UserService implements IUserService {
 	@Override
 	public UserVO getInfo(String userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return mapper.getInfo(userId);
 	}
 
 	@Override

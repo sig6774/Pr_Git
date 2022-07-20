@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="button" class="btn btn-lg btn-info btn-block" id="loginBtn">로그인</button>
+                            <button type="submit" class="btn btn-lg btn-info btn-block" id="loginBtn">로그인</button>
                         </div>
                     </form>
                 </div>

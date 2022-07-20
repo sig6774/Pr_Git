@@ -5,6 +5,17 @@
 
 <mapper namespace="com.spring.pr.user.mapper.IUserMapper">
 	<!-- namespace는 어떤 interface를 참조하는지 지정  -->
+	
+	<resultMap type="user" id="myPageInfo">
+	<id property="userId" column="u_UserId" />
+      <result property="userPw" column="u_UserPw"/>
+      <result property="userName" column="u_UserName"/>
+      <result property="totalUserTel" column="u_UserTel"/>
+      <result property="totalUserEmail" column="u_UserEmail"/>
+      <result property="totalUserAddr" column="u_UserAddr"/>
+      
+	</resultMap>
+	
 	<insert id="join">
 	INSERT INTO pruser
 	(u_UserId, u_UserPw, u_UserName, u_UserTel, u_UserEmail, u_UserAddr)
@@ -16,6 +27,20 @@
 		SELECT * FROM pruser
 		WHERE u_UserId = #{id}
 		AND u_UserPw = #{pw}
+	</select>
+	
+	<select id="getInfo" resultMap="myPageInfo">
+		SELECT 
+		    userId,
+		    userName,
+		    userPhone1,
+		    userPhone2,
+		    userEmail1,
+		    userEmail2,
+		    addrBasic,
+		    addrDetail,
+		    addrZipNum
+		FROM users
 	</select>
 	
 </mapper>

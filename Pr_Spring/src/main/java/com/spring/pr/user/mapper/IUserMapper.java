@@ -6,21 +6,21 @@ import com.spring.pr.command.UserVO;
 
 public interface IUserMapper {
 
-	// ì•„ì´ë”” ì¤‘ë³µ í™•ì¸ 
+	// ¾ÆÀÌµğÁßº¹È®ÀÎ
 	int idCheck(String userId);
 	
-	// íšŒì› ê°€ì… 
+	// È¸¿ø°¡ÀÔ
 	void join(UserVO user);
 	
-	// ë¡œê·¸ì¸
+	// ·Î±×ÀÎ
 	UserVO login(@Param("id") String id, @Param("pw") String pw);
 	
-	// íšŒì›ì •ë³´ ì–»ì–´ì˜¤ê¸° 
+	// ¸¶ÀÌÆäÀÌÁö Á¤º¸°¡Á®¿À±â
 	UserVO getInfo(String userId);
 	
-	// íšŒì› ì •ë³´ ìˆ˜ì • 
+	// Á¤º¸¼öÁ¤
 	void updateUser(UserVO user);
 	
-	// íšŒì› ì •ë³´ ì‚­ì œ 
+	// È¸¿ø Å»Åğ
 	void deleteUser(@Param("id") String id, @Param("pw") String pw);
 }
