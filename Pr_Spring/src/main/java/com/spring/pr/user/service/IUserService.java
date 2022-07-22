@@ -9,6 +9,10 @@ public interface IUserService {
 	// id체크
 	int idCheck(String userId);
 	
+	/*
+	 * //pw체크 int pwCheck(String userPw);
+	 */
+	
 	// 회원가입
 	void join(UserVO user);
 	

@@ -79,12 +79,19 @@
                         </div>
                         <div class="form-group">
                              <label for="hp">이메일</label><br>
-                            <input class="form-control sel" name="userEmail1">@
-                            <select class="form-control sel" name="userEmail2">
+                            <input class="form-control sel" id="userEmail1" name="userEmail1">@
+                            <select class="form-control sel" id="userEmail2" name="userEmail2">
                                 <option>naver.com</option>
                                 <option>gmail.com</option>
                                 <option>daum.net</option>
                             </select>
+                            <div class="input-group-addon">
+			                  	<button type="button" id="mail-check-btn" class="btn btn-primary">이메일 인증</button>
+			              	</div>
+                            <div class="mail-check-box">
+				              	<input type="text" class="mail-check-input" placeholder="인증번호 6자리를 입력하세요." maxlength="6" disabled="disabled">
+				              	<span id="mail-check-warn"></span>
+				            </div>
                         </div>
                         
                         <div class="form-group">
@@ -112,6 +119,27 @@
 </body>
 
 </html>
+<script>
+	$(function(){
+		//인증번호 이메일 전송
+		$('#mail-check-btn').click(function() {
+			const email = $('#userEmail1').val() +'@'+ $('#userEmail2').val();
+			console.log('완성된 이메일: ' + email);
+			
+			$.ajax({
+				type: 'get',
+				url: '<c:url value="/user/mailCheck?email=" />' + email,
+				success: function(data) {
+					console.log('컨트롤러가 전달한 인증번호: ' + data);
+					$('.mail-check-input').attr('disabled', false); //비활성된 인증번호 입력창 활성화.
+					code = data;
+					alert('인증번호가 전송되었습니다. 확인 후 입력란에 정확하게 입력하세요!');
+				}
+			}); //end ajax(이메일 전송)
+			
+		}); //이메일 전송 끝.
+	});	//end function
+</script>
 
 
 

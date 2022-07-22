@@ -15,7 +15,7 @@ public class UserService implements IUserService {
 	@Override
 	public int idCheck(String userId) {
 		// TODO Auto-generated method stub
-		return 0;
+		return mapper.idCheck(userId);
 	}
 
 	@Override
@@ -26,14 +26,15 @@ public class UserService implements IUserService {
 
 	@Override
 	public UserVO login(String id, String pw) {
-		// TODO Auto-generated method stub
-		return mapper.login(id, pw);
+		UserVO vo = mapper.login(id, pw);
+		System.out.println("mapper가 가져온 login 데이터:" + vo);
+		return vo;
 	}
 
 	@Override
 	public UserVO getInfo(String userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return mapper.getInfo(userId);
 	}
 
 	@Override
