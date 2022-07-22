@@ -58,16 +58,17 @@
 		<!-- Log4Jdbc Log4j2 JDBC 4 1 » 1.16 -->
 		<!-- DB log 출력  -->
 		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
-<!-- 		 <dependency>
+ 		 <dependency>
 		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
 		    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
 		    <version>1.16</version>
-		</dependency>  -->
+		</dependency>
 				
 		
 
 		<!-- Logging -->
-<!-- 		<dependency>
+ 		<!-- Logging -->
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${org.slf4j-version}</version>
@@ -84,7 +85,10 @@
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -104,7 +108,7 @@
 				</exclusion>
 			</exclusions>
 			<scope>runtime</scope>
-		</dependency> -->
+		</dependency>
 
 		<!-- <dependency>
 			<groupId>log4j</groupId>

@@ -1,6 +1,9 @@
 package com.spring.pr.command;
 
-import java.security.Timestamp;
+
+
+
+import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
