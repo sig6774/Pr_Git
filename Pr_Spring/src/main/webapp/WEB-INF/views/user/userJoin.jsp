@@ -123,7 +123,7 @@
 	$(function(){
 		//인증번호 이메일 전송
 		$('#mail-check-btn').click(function() {
-			const email = $('#userEmail1').val() + $('#userEmail2').val();
+			const email = $('#userEmail1').val() +'@'+ $('#userEmail2').val();
 			console.log('완성된 이메일: ' + email);
 			
 			$.ajax({

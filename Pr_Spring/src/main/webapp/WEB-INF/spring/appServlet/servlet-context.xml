@@ -34,6 +34,12 @@
 		 base-package에다가 탐색한 패키지 경로를 작성하면 하위 패키지까지 모두 검색  -->
 	<!-- 자동 bean 등록  -->
 	<context:component-scan base-package="com.spring.pr" />
+	<!-- <interceptors>
+		<interceptor>
+			<mapping path=""/>
+			<beans:bean class ="com.spring.pr.util.interceptor.UserLoginSuccessHandler"></beans:bean>
+		</interceptor>
+	</interceptors> -->
 	
 	<!-- 
 		공통 로그들, 예외 처리 내용들을 기존 클래스와 분리해서 객체 지향적으로 사용하기 위해 

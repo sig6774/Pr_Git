@@ -1,4 +1,4 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -7,11 +7,11 @@
 
 	<context:property-placeholder location="classpath:/db-config/email.properties" />
 
-	이메일 인증 관련 빈 등록
+	<!-- 이메일 인증 관련 빈 등록 -->
 	<bean id="mailSender"
 		class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="smtp.gmail.com" /> smtp.naver.com
-		<property name="port" value="587" /> 465
+		<property name="host" value="smtp.gmail.com" /> <!-- smtp.naver.com -->
+		<property name="port" value="587" /> <!-- 465 -->
 		<property name="username" value="${email.account}" />
 		<property name="password" value="${email.password}" />
 
@@ -28,4 +28,3 @@
 	</bean>
 
 </beans>
- -->

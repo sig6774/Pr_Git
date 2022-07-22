@@ -13,7 +13,6 @@
       <result property="totalUserTel" column="u_UserTel"/>
       <result property="totalUserEmail" column="u_UserEmail"/>
       <result property="totalUserAddr" column="u_UserAddr"/>
-      
 	</resultMap>
 	
 	<insert id="join">
@@ -23,7 +22,7 @@
 	(#{userId}, #{userPw}, #{userName}, #{totalUserTel}, #{totalUserEmail}, #{totalUserAddr})
 	</insert>
 	
-	<select id="login" resultType="user">
+	<select id="login" resultMap="myPageInfo" resultType="user">
 		SELECT * FROM pruser
 		WHERE u_UserId = #{id}
 		AND u_UserPw = #{pw}
@@ -31,16 +30,12 @@
 	
 	<select id="getInfo" resultMap="myPageInfo">
 		SELECT 
-		    userId,
-		    userName,
-		    userPhone1,
-		    userPhone2,
-		    userEmail1,
-		    userEmail2,
-		    addrBasic,
-		    addrDetail,
-		    addrZipNum
-		FROM users
+		    u_UserId,
+		    u_UserPw,
+		    u_UserName,
+		    u_UserTel,
+		    u_UserEmail
+		FROM pruser WHERE u_UserId = #{userId}
 	</select>
 	
 </mapper>

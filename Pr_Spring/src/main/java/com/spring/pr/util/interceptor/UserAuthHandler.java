@@ -12,7 +12,7 @@ public class UserAuthHandler implements HandlerInterceptor{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		//세션에서 로그인 데이터를 얻은 후 확인을 해 준다.
-		
+		System.out.println("userLoginAuth");
 		HttpSession session = request.getSession();
 		
 		if(session.getAttribute("login") == null) {

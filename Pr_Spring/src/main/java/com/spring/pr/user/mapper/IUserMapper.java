@@ -9,6 +9,9 @@ public interface IUserMapper {
 	// 아이디중복확인
 	int idCheck(String userId);
 	
+	//비밀번호 확인
+	int pwCheck(String userPw);
+	
 	// 회원가입
 	void join(UserVO user);
 	
