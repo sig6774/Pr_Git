@@ -57,8 +57,8 @@
 	<script>
 		$(function() {
 			$('#listBtn').click(function(){
-				console.log('목록 버튼 클릭 ');
-				if(confirm('게시물 목록으로 돌아가시겠습니까? ')){
+				console.log('목록 버튼 클릭');
+				if(confirm('게시물 목록으로 돌아가시겠습니까?')){
 					location.href='<c:url value="/board/boardList"/>';
 				}
 				else{
@@ -67,8 +67,8 @@
 			});
 			
 			$('#modiBtn').click(function(){
-				console.log('수정 버튼 클릭 ');
-				if (confirm('게시글을 수정하시겠습니까? ')){
+				console.log('수정 버튼 클릭');
+				if (confirm('게시글을 수정하시겠습니까?')){
 					document.modiBtn.submit();
 				}
 				else{
@@ -77,9 +77,9 @@
 			});
 			
 			$('#delBtn').click(function(){
-				console.log('삭제 버튼 클릭 ');
+				console.log('삭제 버튼 클릭');
 				
-				if(confirm('게시글을 삭제하시겠습니까? ')){
+				if(confirm('게시글을 삭제하시겠습니까?')){
 					location.href='<c:url value="/board/boardDelete/${board.BNum}"/>';
 				}
 				else{

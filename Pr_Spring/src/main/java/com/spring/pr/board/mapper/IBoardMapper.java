@@ -7,7 +7,7 @@ import com.spring.pr.command.BoardVO;
 public interface IBoardMapper {
 
 	// 글 등록 
-	void regist(BoardVO board);
+	void regist(BoardVO BNum);
 	
 	// 글 목록
 	List<BoardVO> getList();
@@ -16,11 +16,11 @@ public interface IBoardMapper {
 	int getTotal();
 	
 	// 상세보기 
-	BoardVO getContent(int bno);
+	BoardVO getContent(int BNum);
 	
 	// 수정 
 	void update(BoardVO board);
 	
 	// 삭제 
-	void delete(int bno);
+	void delete(int BNum);
 }
