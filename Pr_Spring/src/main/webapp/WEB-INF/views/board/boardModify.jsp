@@ -32,11 +32,19 @@
 						</div>
 						<div class="form-group">
 							<label>제목</label> <input type="text" class="form-control"
+<<<<<<< HEAD
 								name="BTitle" value="${board.BTitle}">
 						</div>
 						<div class="form-group">
 							<label>내용</label>
 							<textarea class="form-control" rows="5" name="BContent">${board.BContent}</textarea>
+=======
+								name="BTitle" value="${board.BTitle }">
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea class="form-control" rows="5" name="BContent">${board.BContent }</textarea>
+>>>>>>> upfork/master
 						</div>
 
 						<!--구현로직: 버튼은 온클릭을 사용하던 자바스크립트를 이용해야 합니다-->

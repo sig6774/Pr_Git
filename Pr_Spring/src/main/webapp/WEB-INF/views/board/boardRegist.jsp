@@ -55,7 +55,11 @@
 						</tbody>
 					</table>
 
+<<<<<<< HEAD
 					<input  class="btn btn-primary pull-left" id="regiBtn" value="글쓰기">
+=======
+					<input  class="btn btn-primary pull-left" id = "regiBtn" value="글쓰기">
+>>>>>>> upfork/master
 					<input  class="btn btn-primary pull-right" id="listBtn" value="목록">
 					<!-- form으로 글쓰기를 클릭하면 서버에 데이터를 보내고 목록은 jquery를 사용  -->
 				</form>

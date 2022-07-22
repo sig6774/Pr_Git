@@ -24,7 +24,11 @@
 						게시판 상세보기<small>(디자인이궁금하세요?)</small>
 					</h2>
 
+<<<<<<< HEAD
 					<form action="<c:url value='/board/boardModify?BNum=${board.BNum}&writer=${board.BWriter}'/>" method="get" name="modiBtn">
+=======
+					<form action="<c:url value='/board/boardModify?BNum=${board.BNum }&writer=${board.BWriter }'/>" method="get" name="modiBtn">
+>>>>>>> upfork/master
 					<!-- 이거 왜 파라미터 안먹히는거지? -->
 						<div class="form-group">
 							<label>등록일</label> <input type="text" class="form-control"
@@ -32,6 +36,7 @@
 						</div>
 						<div class="form-group">
 							<label>글번호</label> <input type="text" class="form-control"
+<<<<<<< HEAD
 								value="${board.BNum}" id="Bnum" readonly>
 						</div>
 						<div class="form-group">
@@ -45,6 +50,21 @@
 						<div class="form-group">
 							<label>내용</label>
 							<textarea class="form-control" rows="5" id="Bcontent">${board.BContent}</textarea>
+=======
+								value="${board.BNum }" id="Bnum" readonly>
+						</div>
+						<div class="form-group">
+							<label>글쓴이</label> <input type="text" class="form-control"
+								value="${board.BWriter }" id="Bwriter" readonly>
+						</div>
+						<div class="form-group">
+							<label>제목</label> <input type="text" class="form-control"
+								value="${board.BTitle }" id="Btitle" >
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea class="form-control" rows="5" id="Bcontent">${board.BContent }</textarea>
+>>>>>>> upfork/master
 						</div>
 
 						<!--구현로직: 버튼은 온클릭을 사용하던 자바스크립트를 이용해야 합니다-->

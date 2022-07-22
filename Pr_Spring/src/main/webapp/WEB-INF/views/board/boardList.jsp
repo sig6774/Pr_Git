@@ -54,11 +54,19 @@
 								<%-- <td>${b }</td> --%>
 								<!-- 변수는 bNum인데 get할 떄 b가 대문자 B가 됨  -->
 								<td>${b.BNum}</td>
+<<<<<<< HEAD
 								<td><a href="<c:url value='/board/boardDetail/${b.BNum}/${page.makeURI(page.paging.pageNum) }'/>">${b.BTitle}</a></td>
 								<!-- 제목을 클릭하게 된다면 해당 게시물의 번호도 같이 서버에 전송되도록 진행 -->
 								<td>${b.BWriter}</td>
 								<td>${b.BContent}</td>
 								<td><fmt:formatDate value="${b.BDate}" pattern="yyyy-MM-dd HH:mm"></fmt:formatDate></td>
+=======
+								<td><a href="<c:url value='/board/boardDetail/${b.BNum }/${page.makeURI(page.paging.pageNum) }'/>">${b.BTitle}</a></td>
+								<!-- 제목을 클릭하게 된다면 해당 게시물의 번호도 같이 서버에 전송되도록 진행 -->
+								<td>${b.BWriter}</td>
+								<td>${b.BContent}</td>
+								<td><fmt:formatDate value="${b.BDate }" pattern="yyyy-MM-dd HH:mm"></fmt:formatDate></td>
+>>>>>>> upfork/master
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -72,8 +80,13 @@
 						<li><a href="#" data-pagenum="${page.beginPage-1 }">이전</a></li>
 					</c:if>
 					
+<<<<<<< HEAD
 					<c:forEach var="pc" begin="${page.beginPage}" end = "${page.endPage}">
 						<li class="${page.paging.pageNum == pc ? 'acive' : '' }"><a href="#" data-pagenum="${pc}">${pc}</a></li>
+=======
+					<c:forEach var="pc" begin="${page.beginPage}" end = "${page.endPage }">
+						<li class="${page.paging.pageNum == pc ? 'acive' : '' }"><a href="#" data-pagenum="${pc }">${pc }</a></li>
+>>>>>>> upfork/master
 					</c:forEach>
 						
 					<c:if test="${page.next }">
